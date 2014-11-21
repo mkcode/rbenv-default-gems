@@ -1,5 +1,19 @@
 # rbenv-default-gems
 
+## This fork
+
+adds support for default-gems to be symlinks and contains a head-only
+homebrew formula.
+
+To install this fork:
+
+```shell
+  # No need to tap anything.
+  brew install https://raw.githubusercontent.com/mkcode/rbenv-default-gems/master/formula/rbenv-default-gems.rb --HEAD
+```
+
+## Description
+
 This rbenv plugin hooks into the `rbenv install` command to
 automatically install gems every time you install a new version of
 Ruby.
