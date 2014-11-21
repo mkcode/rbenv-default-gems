@@ -8,7 +8,7 @@ install_default_gems() {
   # Only install default gems after successfully installing Ruby.
   [ "$STATUS" = "0" ] || return 0
 
-  if [ -f "${RBENV_ROOT}/default-gems" ]; then
+  if [[ -f "${RBENV_ROOT}/default-gems" ]] || [[ -L "${RBENV_ROOT}/default-gems" ]]; then
     local line gem_name gem_version args
 
     # Read gem names and versions from $RBENV_ROOT/default-gems.
